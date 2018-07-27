@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DnD_Dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-r5-CS8" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="redraw" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tB6-cx-hVH" userLabel="Root Stack View">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="suZ-6y-wLk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-eh-5yn" userLabel="Dice Stack 1">
+                                        <rect key="frame" x="0.0" y="114" width="375" height="125"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d44" translatesAutoresizingMaskIntoConstraints="NO" id="CSS-w3-fuh" userLabel="d4Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="125"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d66" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-ax-X6j" userLabel="d6Image">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="125"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="gvQ-3o-Xqi" userLabel="height = 125"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3YS-Oe-Lj5" userLabel="Button Stack 1">
+                                        <rect key="frame" x="0.0" y="239" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYh-av-f9n" userLabel="d4Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d4ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybk-1R-YVJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hux-mB-6mZ" userLabel="d6Button">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d6ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2I-Wk-2RR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OCX-TF-XIe" userLabel="height = 30"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bL6-DC-0Yz" userLabel="Dice Stack 2">
+                                        <rect key="frame" x="0.0" y="269" width="375" height="125"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d88" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-P0-n5j" userLabel="d8Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="125"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1212" translatesAutoresizingMaskIntoConstraints="NO" id="gUJ-el-Cgk" userLabel="d12Image">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="125"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="JDn-7q-Igp" userLabel="height = 125"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wlw-jx-3eA" userLabel="Button Stack 2">
+                                        <rect key="frame" x="0.0" y="394" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9p-C5-s8a" userLabel="d8Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d8ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4WY-Rg-GDx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OL7-sV-Tau" userLabel="d12Button">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d12">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d12ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKJ-1K-uhq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="RIC-Yp-7iL" userLabel="height = 30"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O22-oX-UDc" userLabel="Dice Stack 3">
+                                        <rect key="frame" x="0.0" y="424" width="375" height="125"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1000" translatesAutoresizingMaskIntoConstraints="NO" id="vIu-Ub-Vi0" userLabel="d100Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="125"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d100" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-Vw-sn2" userLabel="d10Image">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="125"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="rB5-3h-c9H" userLabel="height = 125"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="clY-GL-wWk" userLabel="Button Stack 3">
+                                        <rect key="frame" x="0.0" y="549" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXH-2E-h0c" userLabel="d100Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d100">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d100ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LLa-XI-RdT"/>
+                                                    <action selector="d10ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTh-Hr-rpt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4E-U8-JS2" userLabel="d10Button">
+                                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d10">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d10ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEl-jh-Zkg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hk7-y7-ClU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xmx-uY-loS" userLabel="Dice Stack 4">
+                                        <rect key="frame" x="0.0" y="579" width="375" height="125"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d2020" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-4s-FoC" userLabel="d20Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="LV3-zL-g3y" userLabel="height = 125"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="1tg-Us-e4e" userLabel="Button Stack 4">
+                                        <rect key="frame" x="0.0" y="704" width="375" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJC-WB-Ih8" userLabel="d20Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                <color key="backgroundColor" red="0.19887457745990839" green="0.32314877675970227" blue="0.42996510152284262" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Roll d20">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="d20ButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69K-ck-kdb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="y6g-ke-oZF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="suZ-6y-wLk" firstAttribute="top" secondItem="tB6-cx-hVH" secondAttribute="top" id="10S-fg-H1C"/>
+                                    <constraint firstAttribute="trailing" secondItem="O22-oX-UDc" secondAttribute="trailing" id="2hr-Ak-L1H"/>
+                                    <constraint firstItem="1tg-Us-e4e" firstAttribute="top" secondItem="Xmx-uY-loS" secondAttribute="bottom" id="430-My-OzN"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="4I4-dz-84k"/>
+                                    <constraint firstItem="clY-GL-wWk" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="4k7-0S-7rB"/>
+                                    <constraint firstAttribute="trailing" secondItem="O22-oX-UDc" secondAttribute="trailing" id="4r0-68-i4z"/>
+                                    <constraint firstAttribute="trailing" secondItem="uuF-eh-5yn" secondAttribute="trailing" id="5EI-hx-Ec5"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="718-3O-79J"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="A8n-mJ-Pfu"/>
+                                    <constraint firstAttribute="trailing" secondItem="3YS-Oe-Lj5" secondAttribute="trailing" id="AV3-3A-lqN"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="Bag-5e-y2i"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="top" secondItem="clY-GL-wWk" secondAttribute="bottom" id="BdA-t7-Gp4"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="CWG-Qb-wEq"/>
+                                    <constraint firstAttribute="trailing" secondItem="bL6-DC-0Yz" secondAttribute="trailing" id="DkT-xM-YzX"/>
+                                    <constraint firstAttribute="trailing" secondItem="uuF-eh-5yn" secondAttribute="trailing" id="E3g-CN-DbL"/>
+                                    <constraint firstItem="clY-GL-wWk" firstAttribute="top" secondItem="O22-oX-UDc" secondAttribute="bottom" id="EMU-ic-1fE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xmx-uY-loS" secondAttribute="trailing" id="ElC-wG-7TO"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="top" secondItem="wlw-jx-3eA" secondAttribute="bottom" id="FOx-H2-adD"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="top" secondItem="clY-GL-wWk" secondAttribute="bottom" id="GIc-af-T9j"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="HBh-HD-EQH"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="HQR-KI-GSY"/>
+                                    <constraint firstAttribute="trailing" secondItem="suZ-6y-wLk" secondAttribute="trailing" id="IP4-1F-3Td"/>
+                                    <constraint firstItem="clY-GL-wWk" firstAttribute="top" secondItem="O22-oX-UDc" secondAttribute="bottom" id="J0J-1z-N5X"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tg-Us-e4e" secondAttribute="bottom" id="JFw-VA-NvC"/>
+                                    <constraint firstItem="suZ-6y-wLk" firstAttribute="top" secondItem="tB6-cx-hVH" secondAttribute="top" id="KmW-1a-ZmE"/>
+                                    <constraint firstAttribute="trailing" secondItem="bL6-DC-0Yz" secondAttribute="trailing" id="LuI-Ij-VWR"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="MZN-mP-kpP"/>
+                                    <constraint firstItem="1tg-Us-e4e" firstAttribute="top" secondItem="Xmx-uY-loS" secondAttribute="bottom" id="MgB-86-dC1"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="N5C-Pe-idv"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="NwN-5p-Nbm"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="ODU-hK-8WA"/>
+                                    <constraint firstAttribute="trailing" secondItem="3YS-Oe-Lj5" secondAttribute="trailing" id="Ogo-kw-ebF"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="Orq-Jd-VjV"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="QHs-v0-dQM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xmx-uY-loS" secondAttribute="trailing" id="Ral-ZD-vlZ"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="RqP-cj-wCa"/>
+                                    <constraint firstAttribute="trailing" secondItem="suZ-6y-wLk" secondAttribute="trailing" id="UH7-UW-goh"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="Up1-VV-raK"/>
+                                    <constraint firstItem="clY-GL-wWk" firstAttribute="top" secondItem="O22-oX-UDc" secondAttribute="bottom" id="UsE-cv-DuB"/>
+                                    <constraint firstAttribute="trailing" secondItem="uuF-eh-5yn" secondAttribute="trailing" id="VT1-AG-aWz"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="top" secondItem="clY-GL-wWk" secondAttribute="bottom" id="WGM-XW-dzL"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="XJA-3L-14J"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="XSM-Wr-3sq"/>
+                                    <constraint firstItem="1tg-Us-e4e" firstAttribute="top" secondItem="Xmx-uY-loS" secondAttribute="bottom" id="YKJ-mT-u6H"/>
+                                    <constraint firstAttribute="trailing" secondItem="clY-GL-wWk" secondAttribute="trailing" id="Yz7-ii-hEC"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="ZVp-x6-hVK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xmx-uY-loS" secondAttribute="trailing" id="aEX-5m-8Of"/>
+                                    <constraint firstItem="wlw-jx-3eA" firstAttribute="top" secondItem="bL6-DC-0Yz" secondAttribute="bottom" id="bMq-Mh-BKF"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="c0B-ZO-SzI"/>
+                                    <constraint firstAttribute="trailing" secondItem="uuF-eh-5yn" secondAttribute="trailing" id="c3z-dB-uKQ"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="cFN-Y4-7ao"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="cUA-jf-IiF"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="dWT-M5-EeV"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="dz2-K7-QPG"/>
+                                    <constraint firstItem="suZ-6y-wLk" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="f1m-hE-UQd"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="top" secondItem="clY-GL-wWk" secondAttribute="bottom" id="hJ4-U7-3uw"/>
+                                    <constraint firstAttribute="trailing" secondItem="O22-oX-UDc" secondAttribute="trailing" id="j7e-6o-IcY"/>
+                                    <constraint firstAttribute="trailing" secondItem="bL6-DC-0Yz" secondAttribute="trailing" id="k6W-vb-mO3"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="koe-Uc-nMt"/>
+                                    <constraint firstItem="wlw-jx-3eA" firstAttribute="top" secondItem="bL6-DC-0Yz" secondAttribute="bottom" id="l4V-bT-yk2"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="lGP-5x-vRQ"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="m3D-cj-OBK"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="moC-QM-hka"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="ngY-0C-vFb"/>
+                                    <constraint firstItem="suZ-6y-wLk" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="o6j-og-yk3"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="top" secondItem="3YS-Oe-Lj5" secondAttribute="bottom" id="oB9-O6-duA"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="qGc-WL-kLu"/>
+                                    <constraint firstItem="Xmx-uY-loS" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="rSc-HZ-Fjq"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="rTQ-wJ-Xvi"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="sPQ-Ih-eA5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xmx-uY-loS" secondAttribute="trailing" id="saX-z3-RKd"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="top" secondItem="suZ-6y-wLk" secondAttribute="bottom" id="sm9-oP-qH7"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="top" secondItem="wlw-jx-3eA" secondAttribute="bottom" id="tSN-Bc-qDm"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="tyz-hN-pPr"/>
+                                    <constraint firstItem="bL6-DC-0Yz" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="xQp-5V-VIy"/>
+                                    <constraint firstItem="wlw-jx-3eA" firstAttribute="top" secondItem="bL6-DC-0Yz" secondAttribute="bottom" id="xmo-fM-aHH"/>
+                                    <constraint firstAttribute="trailing" secondItem="3YS-Oe-Lj5" secondAttribute="trailing" id="yfV-By-iGr"/>
+                                    <constraint firstItem="1tg-Us-e4e" firstAttribute="top" secondItem="Xmx-uY-loS" secondAttribute="bottom" id="zH4-Yf-im2"/>
+                                    <constraint firstItem="uuF-eh-5yn" firstAttribute="leading" secondItem="tB6-cx-hVH" secondAttribute="leading" id="zKg-5c-qOO"/>
+                                    <constraint firstItem="O22-oX-UDc" firstAttribute="top" secondItem="wlw-jx-3eA" secondAttribute="bottom" id="zg9-vd-upx"/>
+                                    <constraint firstItem="3YS-Oe-Lj5" firstAttribute="top" secondItem="uuF-eh-5yn" secondAttribute="bottom" id="zm3-PH-9cZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Mv-8W-pnV"/>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8dy-QH-VDu"/>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Abi-sW-zp0"/>
+                            <constraint firstAttribute="trailing" secondItem="0i6-r5-CS8" secondAttribute="trailing" id="E6F-k1-Dbg"/>
+                            <constraint firstItem="0i6-r5-CS8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nr4-7W-R8U"/>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZHN-0z-lom"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tB6-cx-hVH" secondAttribute="trailing" id="dgK-Yl-gGB"/>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fE6-gv-ASU"/>
+                            <constraint firstItem="0i6-r5-CS8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jsU-nm-764"/>
+                            <constraint firstAttribute="bottom" secondItem="0i6-r5-CS8" secondAttribute="bottom" id="mEx-Dr-zO2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tB6-cx-hVH" secondAttribute="bottom" id="nEA-ip-wSv"/>
+                            <constraint firstItem="tB6-cx-hVH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qhm-Z4-nh8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="d100Image" destination="vIu-Ub-Vi0" id="zf6-t8-dml"/>
+                        <outlet property="d10Image" destination="eFa-Vw-sn2" id="Svm-Cv-KoG"/>
+                        <outlet property="d12Image" destination="gUJ-el-Cgk" id="lNg-gY-6pp"/>
+                        <outlet property="d20Image" destination="OqZ-4s-FoC" id="Eo3-4u-aWI"/>
+                        <outlet property="d4Image" destination="CSS-w3-fuh" id="jaq-py-Aac"/>
+                        <outlet property="d6Image" destination="Lgc-ax-X6j" id="EIJ-a1-Yth"/>
+                        <outlet property="d8Image" destination="Um5-P0-n5j" id="e6B-oc-84m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gradient" width="500" height="889"/>
+        <image name="Header" width="1126" height="432"/>
+        <image name="d100" width="723" height="723"/>
+        <image name="d1000" width="782" height="782"/>
+        <image name="d1212" width="725" height="725"/>
+        <image name="d2020" width="968" height="968"/>
+        <image name="d44" width="970" height="970"/>
+        <image name="d66" width="837" height="837"/>
+        <image name="d88" width="685" height="685"/>
+    </resources>
+</document>
